@@ -2,17 +2,18 @@ import React from 'react';
 import { mount } from '@cypress/react';
 import App from './App';
 
-it('renders learn react link', () => {
+it('case 1', () => {
   mount(<App />);
   cy.get('a').contains('Learn React');
 });
 
-
-it('renders app and fetch elemnet using react-selector', () => {
+it('click the button triggering window.location.replace', () => {
   mount(<App />);
-
-// cypress-react-selector helps identifying elements using native react pro[erties - component, props and states
-// find more here - https://github.com/abhinaba-ghosh/cypress-react-selector
-  cy.waitForReact();
-  cy.react('App').should('be.visible');
+  cy.get('button').click();
 });
+
+it('case 2', () => {
+  mount(<App />);
+  cy.get('a').contains('Learn React');
+});
+
