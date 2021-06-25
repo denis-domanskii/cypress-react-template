@@ -28,7 +28,7 @@ function App() {
                     Learn React
                 </a>
                 {/* window.location.origin is smth like http://localhost:50131/ */}
-                <button onClick={() => window.location.replace(window.location.origin)}
+                <button onClick={() => window.location.replace(window.location.origin + '/example')}
                 >REPLACE
                 </button>
             </header>

@@ -10,6 +10,9 @@ it('case 1', () => {
 it('click the button triggering window.location.replace', () => {
   mount(<App />);
   cy.get('button').click();
+  cy.location().should(loc => {
+    expect(loc.pathname).to.match(/example/);
+  });
 });
 
 it('case 2', () => {
